@@ -37,12 +37,12 @@
           unset($url[1]);
         }
       }
-      
-    // Get params
-    $this->params = $url ? array_values($url) : [];
 
-    // Call a callback with array of params
-    call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
+      // Get params
+      $this->params = $url ? array_values($url) : [];
+
+      // Call a callback with array of params
+      call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
       
     }
 
